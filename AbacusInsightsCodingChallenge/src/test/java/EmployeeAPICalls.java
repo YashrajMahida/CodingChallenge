@@ -1,3 +1,6 @@
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -11,6 +14,8 @@ import java.io.IOException;
 
 public class EmployeeAPICalls {
     private static Logger log = LogManager.getLogger (EmployeeAPICalls.class.getName ());
+    public static ExtentReports reports = new ExtentReports ("report.html");
+    public static ExtentTest test;
 
     public static void createEmployee () throws IOException {
         int beforeAddingEmployeeCount = getTotalEmployeeCount ();
@@ -30,16 +35,23 @@ public class EmployeeAPICalls {
         request.header ("Content-Type", "application/json");
         request.body (requestParams.toString ());
         Response response = request.post ("/create");
-        log.info (response.body ().asString ());
+        test.log (LogStatus.INFO, response.body ().asString ());
         System.out.println (response.body ().asString ());
         int statusCode = response.statusCode ();
+        test.log (LogStatus.INFO, "Status Code:"+statusCode);
         Assert.assertEquals (200, statusCode);
         JsonPath jsonPathEvaluator = response.jsonPath();
         String employeeID = jsonPathEvaluator.getString ("id");
+        test.log (LogStatus.INFO, "Employee ID:"+employeeID);
         System.out.println ("Employee ID: "+employeeID);
         GenericMethods.setCellData (employeeID,1,0);
         int AfterAddingEmployeeCount = getTotalEmployeeCount ();
-        Assert.assertEquals (beforeAddingEmployeeCount+1,AfterAddingEmployeeCount);
+        if (beforeAddingEmployeeCount+1 != AfterAddingEmployeeCount) {
+            Assert.assertEquals (beforeAddingEmployeeCount + 1, AfterAddingEmployeeCount);
+            test.log (LogStatus.INFO,"Employee count increased!");
+        }else {
+            test.log (LogStatus.FAIL,"Employee count doesnt match");
+        }
     }
 
     public static void getEmployee (String testScenario, String EmployeeID) throws IOException {

@@ -2,23 +2,35 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-10-02T22:28:33Z" name="TestSuite" finished-at="2019-10-02T22:28:43Z" duration-ms="9450">
+  <suite started-at="2019-10-03T15:29:52Z" name="TestSuite" finished-at="2019-10-03T15:30:03Z" duration-ms="11089">
     <groups>
     </groups>
-    <test started-at="2019-10-02T22:28:33Z" name="Test" finished-at="2019-10-02T22:28:43Z" duration-ms="9450">
+    <test started-at="2019-10-03T15:29:52Z" name="Test" finished-at="2019-10-03T15:30:03Z" duration-ms="11089">
       <class name="EmployeeAPITest">
-        <test-method signature="positiveScenario()[pri:1, instance:EmployeeAPITest@6b2ea799]" started-at="2019-10-02T22:28:33Z" name="positiveScenario" finished-at="2019-10-02T22:28:40Z" duration-ms="6630" status="PASS">
+        <test-method signature="positiveScenario()[pri:1, instance:EmployeeAPITest@31fa1761]" started-at="2019-10-03T15:29:52Z" name="positiveScenario" finished-at="2019-10-03T15:29:59Z" duration-ms="6843" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- positiveScenario -->
-        <test-method signature="negativeScenarioDeleteBeforeSearching()[pri:2, instance:EmployeeAPITest@6b2ea799]" started-at="2019-10-02T22:28:40Z" name="negativeScenarioDeleteBeforeSearching" finished-at="2019-10-02T22:28:42Z" duration-ms="2477" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:EmployeeAPITest@31fa1761]" started-at="2019-10-03T15:29:59Z" name="afterClass" finished-at="2019-10-03T15:29:59Z" duration-ms="218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method signature="negativeScenarioDeleteBeforeSearching()[pri:2, instance:EmployeeAPITest@31fa1761]" started-at="2019-10-03T15:29:59Z" name="negativeScenarioDeleteBeforeSearching" finished-at="2019-10-03T15:30:02Z" duration-ms="3432" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- negativeScenarioDeleteBeforeSearching -->
-        <test-method signature="negativeScenarioGetEmployeeWithIncorrectID()[pri:3, instance:EmployeeAPITest@6b2ea799]" started-at="2019-10-02T22:28:42Z" name="negativeScenarioGetEmployeeWithIncorrectID" finished-at="2019-10-02T22:28:43Z" duration-ms="290" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:EmployeeAPITest@31fa1761]" started-at="2019-10-03T15:30:02Z" name="afterClass" finished-at="2019-10-03T15:30:02Z" duration-ms="49" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method signature="negativeScenarioGetEmployeeWithIncorrectID()[pri:3, instance:EmployeeAPITest@31fa1761]" started-at="2019-10-03T15:30:02Z" name="negativeScenarioGetEmployeeWithIncorrectID" finished-at="2019-10-03T15:30:03Z" duration-ms="473" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- negativeScenarioGetEmployeeWithIncorrectID -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:EmployeeAPITest@31fa1761]" started-at="2019-10-03T15:30:03Z" name="afterClass" finished-at="2019-10-03T15:30:03Z" duration-ms="37" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
       </class> <!-- EmployeeAPITest -->
     </test> <!-- Test -->
   </suite> <!-- TestSuite -->

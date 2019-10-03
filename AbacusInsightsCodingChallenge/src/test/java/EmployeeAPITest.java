@@ -18,7 +18,7 @@ public class EmployeeAPITest {
 
     @Test(priority = 1)
     public static void positiveScenario() throws IOException {
-        String testScenario = "This is a positive test case scenario!!!!";
+        String testScenario = "This is a positive test case scenario";
         test = reports.startTest (testScenario);
         test.log (LogStatus.INFO, testScenario);
         EmployeeAPICalls.createEmployee();
