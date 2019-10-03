@@ -13,9 +13,7 @@ import org.testng.Assert;
 import java.io.IOException;
 
 public class EmployeeAPICalls {
-    private static Logger log = LogManager.getLogger (EmployeeAPICalls.class.getName ());
-    public static ExtentReports reports = new ExtentReports ("report.html");
-    public static ExtentTest test;
+
 
     public static void createEmployee () throws IOException {
         int beforeAddingEmployeeCount = getTotalEmployeeCount ();
@@ -27,6 +25,7 @@ public class EmployeeAPICalls {
         GenericMethods.setCellData (employeeSalary,1,2);
         String employeeAge = String.valueOf (GenericMethods.generateRandomAge ());
         GenericMethods.setCellData (employeeAge,1,3);
+        Reporting.test.log (LogStatus.INFO,"Creating employee with following details: Employee name- "+employeeName+" Employee Salary: "+employeeSalary+" Employee Age: "+employeeAge);
 
         JSONObject requestParams = new JSONObject ();
         requestParams.put ("name", employeeName);
@@ -35,16 +34,26 @@ public class EmployeeAPICalls {
         request.header ("Content-Type", "application/json");
         request.body (requestParams.toString ());
         Response response = request.post ("/create");
-        log.info (response.toString ());
         System.out.println (response.body ().asString ());
         int statusCode = response.statusCode ();
-        Assert.assertEquals (200, statusCode);
+        if (statusCode==200) {
+            Assert.assertEquals (200, statusCode);
+            Reporting.test.log (LogStatus.PASS, "Status Code is 200");
+        }else {
+            Reporting.test.log (LogStatus.FAIL,"Status code is not 200");
+        }
+        String responseBody = response.body ().asString ();
+        Reporting.test.log (LogStatus.INFO,"Response Body: "+responseBody);
         JsonPath jsonPathEvaluator = response.jsonPath();
         String employeeID = jsonPathEvaluator.getString ("id");
         System.out.println ("Employee ID: "+employeeID);
+        Reporting.test.log (LogStatus.INFO,"Employee ID is: "+employeeID);
         GenericMethods.setCellData (employeeID,1,0);
         int AfterAddingEmployeeCount = getTotalEmployeeCount ();
-        Assert.assertEquals (beforeAddingEmployeeCount+1,AfterAddingEmployeeCount);
+        if (beforeAddingEmployeeCount+1==AfterAddingEmployeeCount) {
+            Assert.assertEquals (beforeAddingEmployeeCount + 1, AfterAddingEmployeeCount);
+            Reporting.test.log (LogStatus.PASS,"New employee creation is successfull");
+        }
     }
 
     public static void getEmployee (String testScenario, String EmployeeID) throws IOException {
@@ -52,10 +61,16 @@ public class EmployeeAPICalls {
         RequestSpecification request = RestAssured.given ();
         request.header ("Content-Type", "application/json");
         Response response = request.get("/employee/"+EmployeeID);
-        log.info (response.body ().asString ());
-        System.out.println (response.body ().asString ());
+
+        //System.out.println (response.body ().asString ());
         int statusCode = response.statusCode ();
-        Assert.assertEquals (200, statusCode);
+        if (statusCode==200) {
+            Assert.assertEquals (200, statusCode);
+            Reporting.test.log (LogStatus.PASS, "Status Code is 200");
+            Reporting.test.log (LogStatus.PASS,"Employee Details: "+response.asString ());
+        }else {
+            Reporting.test.log (LogStatus.FAIL,"Status code is not 200");
+        }
         JsonPath jsonPathEvaluator = response.jsonPath();
 
         switch (testScenario) {
@@ -67,16 +82,19 @@ public class EmployeeAPICalls {
                 Assert.assertEquals (GenericMethods.getCellData (1, 1), employee_name);
                 Assert.assertEquals (GenericMethods.getCellData (1, 2), employee_salary);
                 Assert.assertEquals (GenericMethods.getCellData (1, 3), employee_age);
+                Reporting.test.log (LogStatus.PASS,"Employee Details verified.");
                 break;
 
             case "This is a negative test case scenario where employee record is deleted before fetching the employee record":
                 String responseBody = response.body ().asString ();
                 Assert.assertEquals ("false",responseBody);
+                Reporting.test.log (LogStatus.PASS,"Negative Test Pass");
                 break;
 
             case "This is a negative test case scenario where employee record is fetched the wiht incorrect employee ID":
                 String responseBody2 = response.body ().asString ();
                 Assert.assertEquals ("false",responseBody2);
+                Reporting.test.log (LogStatus.PASS,"Negative Test Pass");
                 break;
         }
 
@@ -87,7 +105,7 @@ public class EmployeeAPICalls {
         RequestSpecification request = RestAssured.given ();
 
         String employeeSalary = String.valueOf (GenericMethods.generateRandomSalary ());
-        log.info ("New Employee salary is: "+employeeSalary);
+        Reporting.test.log (LogStatus.INFO,"Changing employee salalry to: "+employeeSalary);
         GenericMethods.setCellData (employeeSalary,1,2);
 
         JSONObject requestParams = new JSONObject ();
@@ -100,10 +118,16 @@ public class EmployeeAPICalls {
 
         request.header ("Content-Type", "application/json");
         Response response = request.put ("/update/"+GenericMethods.getCellData (1,0));
-        log.info (response.body ().asString ());
+        Reporting.log.info (response.body ().asString ());
         System.out.println (response.body ().asString ());
         int statusCode = response.statusCode ();
-        Assert.assertEquals (200, statusCode);
+        if (statusCode==200) {
+            Assert.assertEquals (200, statusCode);
+            Reporting.test.log (LogStatus.PASS, "Status Code is 200");
+            Reporting.test.log (LogStatus.INFO,"Employee Salary updated");
+        }else {
+            Reporting.test.log (LogStatus.FAIL,"Status code is not 200");
+        }
         JsonPath jsonPathEvaluator = response.jsonPath();
         String employee_name = jsonPathEvaluator.getString ("name");
         String employee_salary = jsonPathEvaluator.getString ("salary");
@@ -116,21 +140,24 @@ public class EmployeeAPICalls {
 
     public static void deleteEmployee () throws IOException {
         int beforeDeletingEmployeeCount = getTotalEmployeeCount ();
-        log.info ("Before Deleting the total number of employees are"+beforeDeletingEmployeeCount);
+        Reporting.log.info ("Before Deleting the total number of employees are"+beforeDeletingEmployeeCount);
         RestAssured.baseURI = "http://dummy.restapiexample.com/api/v1";
         RequestSpecification request = RestAssured.given ();
         request.header ("Content-Type", "application/json");
         Response response = request.delete ("/delete/"+GenericMethods.getCellData (1,0));
-        log.info (response.body ().asString ());
-        System.out.println (response.body ().asString ());
         int statusCode = response.statusCode ();
         JsonPath jsonPathEvaluator = response.jsonPath();
-        Assert.assertEquals (200, statusCode);
+        if (statusCode==200) {
+            Assert.assertEquals (200, statusCode);
+            Reporting.test.log (LogStatus.PASS, "Status Code is 200");
+        }else {
+            Reporting.test.log (LogStatus.FAIL,"Status code is not 200");
+        }
         String successMessage = jsonPathEvaluator.getString ("success.text");
-        log.info (successMessage);
         Assert.assertEquals ("successfully! deleted Records",successMessage);
+        Reporting.test.log (LogStatus.PASS, successMessage);
         int AfterDeletinggEmployeeCount = getTotalEmployeeCount ();
-        log.info ("After Deleting the total number of employees are"+AfterDeletinggEmployeeCount);
+        Reporting.log.info ("After Deleting the total number of employees are"+AfterDeletinggEmployeeCount);
         Assert.assertEquals (AfterDeletinggEmployeeCount,beforeDeletingEmployeeCount-1);
 
     }

@@ -39,8 +39,8 @@
       <file leaf-file-name="EmployeeAPITest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/EmployeeAPITest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="614">
+              <caret line="45" column="68" lean-forward="false" selection-start-line="45" selection-start-column="68" selection-end-line="45" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,8 +51,20 @@
       <file leaf-file-name="EmployeeAPICalls.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/EmployeeAPICalls.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="37" column="38" lean-forward="false" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+            <state relative-caret-position="525">
+              <caret line="157" column="60" lean-forward="false" selection-start-line="157" selection-start-column="60" selection-end-line="157" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Reporting.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Reporting.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,6 +118,7 @@
         <option value="$PROJECT_DIR$/src/main/java/utils/ExtentReport/ExtentTestManager.java" />
         <option value="$PROJECT_DIR$/test.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/Reporting.java" />
         <option value="$PROJECT_DIR$/src/test/java/EmployeeAPITest.java" />
         <option value="$PROJECT_DIR$/src/test/java/EmployeeAPICalls.java" />
       </list>
@@ -453,34 +466,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EmployeeAPITest - 2019.10.02 at 19h 25m 03s.xml">
-      <configuration name="EmployeeAPITest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="EmployeeAPITest - 2019.10.02 at 19h 25m 53s.xml">
-      <configuration name="EmployeeAPITest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="EmployeeAPITest - 2019.10.02 at 19h 26m 19s.xml">
-      <configuration name="EmployeeAPITest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="EmployeeAPITest - 2019.10.03 at 11h 49m 57s.xml">
-      <configuration name="EmployeeAPITest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="EmployeeAPITest - 2019.10.03 at 11h 51m 02s.xml">
-      <configuration name="EmployeeAPITest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="EmployeeAPITest - 2019.10.03 at 11h 51m 44s.xml">
-      <configuration name="EmployeeAPITest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="EmployeeAPITest - 2019.10.03 at 12h 06m 23s.xml">
-      <configuration name="EmployeeAPITest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="EmployeeAPITest - 2019.10.03 at 12h 07m 19s.xml">
-      <configuration name="EmployeeAPITest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="EmployeeAPITest - 2019.10.03 at 12h 10m 11s.xml">
       <configuration name="EmployeeAPITest" configurationId="TestNG" />
     </history-entry>
     <history-entry file="EmployeeAPITest - 2019.10.03 at 12h 10m 48s.xml">
+      <configuration name="EmployeeAPITest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="EmployeeAPITest - 2019.10.03 at 12h 14m 33s.xml">
+      <configuration name="EmployeeAPITest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="EmployeeAPITest - 2019.10.03 at 12h 24m 25s.xml">
+      <configuration name="EmployeeAPITest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="EmployeeAPITest - 2019.10.03 at 12h 26m 13s.xml">
+      <configuration name="EmployeeAPITest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="EmployeeAPITest - 2019.10.03 at 12h 30m 42s.xml">
+      <configuration name="EmployeeAPITest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="EmployeeAPITest - 2019.10.03 at 12h 38m 54s.xml">
+      <configuration name="EmployeeAPITest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="EmployeeAPITest - 2019.10.03 at 12h 39m 51s.xml">
+      <configuration name="EmployeeAPITest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="EmployeeAPITest - 2019.10.03 at 12h 40m 30s.xml">
+      <configuration name="EmployeeAPITest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="EmployeeAPITest - 2019.10.03 at 12h 46m 22s.xml">
       <configuration name="EmployeeAPITest" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -496,7 +509,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299298" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299298" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -633,14 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-EmployeeAPITest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -657,6 +662,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -667,8 +680,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/EmployeeAPITest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="614">
+          <caret line="45" column="68" lean-forward="false" selection-start-line="45" selection-start-column="68" selection-end-line="45" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Reporting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -677,8 +700,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/EmployeeAPICalls.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="37" column="38" lean-forward="false" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+        <state relative-caret-position="525">
+          <caret line="157" column="60" lean-forward="false" selection-start-line="157" selection-start-column="60" selection-end-line="157" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
