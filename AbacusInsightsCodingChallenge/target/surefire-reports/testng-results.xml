@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2019-10-02T22:28:33Z" name="TestSuite" finished-at="2019-10-02T22:28:43Z" duration-ms="9450">
+    <groups>
+    </groups>
+    <test started-at="2019-10-02T22:28:33Z" name="Test" finished-at="2019-10-02T22:28:43Z" duration-ms="9450">
+      <class name="EmployeeAPITest">
+        <test-method signature="positiveScenario()[pri:1, instance:EmployeeAPITest@6b2ea799]" started-at="2019-10-02T22:28:33Z" name="positiveScenario" finished-at="2019-10-02T22:28:40Z" duration-ms="6630" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- positiveScenario -->
+        <test-method signature="negativeScenarioDeleteBeforeSearching()[pri:2, instance:EmployeeAPITest@6b2ea799]" started-at="2019-10-02T22:28:40Z" name="negativeScenarioDeleteBeforeSearching" finished-at="2019-10-02T22:28:42Z" duration-ms="2477" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeScenarioDeleteBeforeSearching -->
+        <test-method signature="negativeScenarioGetEmployeeWithIncorrectID()[pri:3, instance:EmployeeAPITest@6b2ea799]" started-at="2019-10-02T22:28:42Z" name="negativeScenarioGetEmployeeWithIncorrectID" finished-at="2019-10-02T22:28:43Z" duration-ms="290" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeScenarioGetEmployeeWithIncorrectID -->
+      </class> <!-- EmployeeAPITest -->
+    </test> <!-- Test -->
+  </suite> <!-- TestSuite -->
+</testng-results>
