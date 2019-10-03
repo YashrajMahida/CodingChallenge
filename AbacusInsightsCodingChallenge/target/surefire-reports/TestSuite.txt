@@ -1,4 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.899 sec
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 6.689 sec <<< FAILURE!
+positiveScenario(EmployeeAPITest)  Time elapsed: 3.817 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at EmployeeAPICalls.createEmployee(EmployeeAPICalls.java:38)
+	at EmployeeAPITest.positiveScenario(EmployeeAPITest.java:24)
+
+negativeScenarioDeleteBeforeSearching(EmployeeAPITest)  Time elapsed: 1.122 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at EmployeeAPICalls.createEmployee(EmployeeAPICalls.java:38)
+	at EmployeeAPITest.negativeScenarioDeleteBeforeSearching(EmployeeAPITest.java:38)
+

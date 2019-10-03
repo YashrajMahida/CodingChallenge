@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-TestSuite" class="navigator-link">
-              <span class="suite-name border-passed">TestSuite</span>
+              <span class="suite-name border-failed">TestSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-TestSuite" class="hide-methods failed suite-TestSuite"> (hide)</a> <!-- hide-methods failed suite-TestSuite -->
+                      <a href="#" panel-name="suite-TestSuite" class="show-methods failed suite-TestSuite"> (show)</a> <!-- show-methods failed suite-TestSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-TestSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="EmployeeAPITest" class="method navigator-link" hash-for-method="negativeScenarioDeleteBeforeSearching">negativeScenarioDeleteBeforeSearching</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="EmployeeAPITest" class="method navigator-link" hash-for-method="positiveScenario">positiveScenario</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-TestSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,17 +121,7 @@
                     <div class="method-list-content passed suite-TestSuite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-TestSuite" title="EmployeeAPITest" class="method navigator-link" hash-for-method="negativeScenarioDeleteBeforeSearching">negativeScenarioDeleteBeforeSearching</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-TestSuite" title="EmployeeAPITest" class="method navigator-link" hash-for-method="negativeScenarioGetEmployeeWithIncorrectID">negativeScenarioGetEmployeeWithIncorrectID</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-TestSuite" title="EmployeeAPITest" class="method navigator-link" hash-for-method="positiveScenario">positiveScenario</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-TestSuite -->
@@ -127,9 +136,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-TestSuite" class="panel TestSuite">
-          <div class="suite-TestSuite-class-passed">
+          <div class="suite-TestSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">EmployeeAPITest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -138,13 +147,11 @@
                   <a name="negativeScenarioDeleteBeforeSearching">
                   </a> <!-- negativeScenarioDeleteBeforeSearching -->
                   <span class="method-name">negativeScenarioDeleteBeforeSearching</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="negativeScenarioGetEmployeeWithIncorrectID">
-                  </a> <!-- negativeScenarioGetEmployeeWithIncorrectID -->
-                  <span class="method-name">negativeScenarioGetEmployeeWithIncorrectID</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at EmployeeAPICalls.createEmployee(EmployeeAPICalls.java:38)
+	at EmployeeAPITest.negativeScenarioDeleteBeforeSearching(EmployeeAPITest.java:38)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -152,6 +159,26 @@
                   <a name="positiveScenario">
                   </a> <!-- positiveScenario -->
                   <span class="method-name">positiveScenario</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at EmployeeAPICalls.createEmployee(EmployeeAPICalls.java:38)
+	at EmployeeAPITest.positiveScenario(EmployeeAPITest.java:24)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestSuite-class-failed -->
+          <div class="suite-TestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">EmployeeAPITest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="negativeScenarioGetEmployeeWithIncorrectID">
+                  </a> <!-- negativeScenarioGetEmployeeWithIncorrectID -->
+                  <span class="method-name">negativeScenarioGetEmployeeWithIncorrectID</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -212,20 +239,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'positiveScenario')
 data.setCell(0, 2, 'EmployeeAPITest')
-data.setCell(0, 3, 6843);
+data.setCell(0, 3, 3811);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'negativeScenarioDeleteBeforeSearching')
 data.setCell(1, 2, 'EmployeeAPITest')
-data.setCell(1, 3, 3432);
+data.setCell(1, 3, 1121);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'negativeScenarioGetEmployeeWithIncorrectID')
 data.setCell(2, 2, 'EmployeeAPITest')
-data.setCell(2, 3, 473);
+data.setCell(2, 3, 529);
 window.suiteTableData['TestSuite']= { tableData: data, tableDiv: 'times-div-TestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-TestSuite">
               </div> <!-- times-div-TestSuite -->
             </div> <!-- times-div -->
@@ -253,28 +280,32 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">EmployeeAPITest</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">positiveScenario</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">6862 ms</span>
+                <span class="method-start">3819 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">negativeScenarioDeleteBeforeSearching</span>
-                <span class="method-start">7082 ms</span>
+                <span class="method-start">4066 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">10515 ms</span>
+                <span class="method-start">5188 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">negativeScenarioGetEmployeeWithIncorrectID</span>
-                <span class="method-start">10565 ms</span>
+                <span class="method-start">5258 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">11038 ms</span>
+                <span class="method-start">5788 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

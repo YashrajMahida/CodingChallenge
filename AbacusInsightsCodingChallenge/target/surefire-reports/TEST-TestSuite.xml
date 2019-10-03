@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="TestSuite" time="11.892" errors="0" skipped="0">
+<testsuite tests="3" failures="2" name="TestSuite" time="6.683" errors="0" skipped="0">
   <properties>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="env.SYSTEMROOT" value="C:\windows"/>
@@ -131,7 +131,21 @@
     <property name="env.PROCESSOR_LEVEL" value="6"/>
     <property name="env.VBOX_MSI_INSTALL_PATH" value="C:\Program Files\Desktop Metal Fabricate\virtualbox\"/>
   </properties>
-  <testcase classname="EmployeeAPITest" name="positiveScenario" time="6.856"/>
-  <testcase classname="EmployeeAPITest" name="negativeScenarioDeleteBeforeSearching" time="3.433"/>
-  <testcase classname="EmployeeAPITest" name="negativeScenarioGetEmployeeWithIncorrectID" time="0.473"/>
+  <testcase classname="EmployeeAPITest" name="positiveScenario" time="3.812">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at EmployeeAPICalls.createEmployee(EmployeeAPICalls.java:38)
+	at EmployeeAPITest.positiveScenario(EmployeeAPITest.java:24)
+</failure>
+    <system-err>log4j:WARN No appenders could be found for logger (org.apache.http.impl.conn.BasicClientConnectionManager).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+</system-err>
+  </testcase>
+  <testcase classname="EmployeeAPITest" name="negativeScenarioDeleteBeforeSearching" time="1.122">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at EmployeeAPICalls.createEmployee(EmployeeAPICalls.java:38)
+	at EmployeeAPITest.negativeScenarioDeleteBeforeSearching(EmployeeAPITest.java:38)
+</failure>
+  </testcase>
+  <testcase classname="EmployeeAPITest" name="negativeScenarioGetEmployeeWithIncorrectID" time="0.529"/>
 </testsuite>

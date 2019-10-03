@@ -1,33 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-10-03T15:29:52Z" name="TestSuite" finished-at="2019-10-03T15:30:03Z" duration-ms="11089">
+  <suite started-at="2019-10-03T15:49:21Z" name="TestSuite" finished-at="2019-10-03T15:49:27Z" duration-ms="5838">
     <groups>
     </groups>
-    <test started-at="2019-10-03T15:29:52Z" name="Test" finished-at="2019-10-03T15:30:03Z" duration-ms="11089">
+    <test started-at="2019-10-03T15:49:21Z" name="Test" finished-at="2019-10-03T15:49:27Z" duration-ms="5838">
       <class name="EmployeeAPITest">
-        <test-method signature="positiveScenario()[pri:1, instance:EmployeeAPITest@31fa1761]" started-at="2019-10-03T15:29:52Z" name="positiveScenario" finished-at="2019-10-03T15:29:59Z" duration-ms="6843" status="PASS">
+        <test-method signature="positiveScenario()[pri:1, instance:EmployeeAPITest@31fa1761]" started-at="2019-10-03T15:49:21Z" name="positiveScenario" finished-at="2019-10-03T15:49:24Z" duration-ms="3811" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at EmployeeAPICalls.createEmployee(EmployeeAPICalls.java:38)
+at EmployeeAPITest.positiveScenario(EmployeeAPITest.java:24)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:74)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:338)
+at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:997)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- positiveScenario -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:EmployeeAPITest@31fa1761]" started-at="2019-10-03T15:29:59Z" name="afterClass" finished-at="2019-10-03T15:29:59Z" duration-ms="218" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:EmployeeAPITest@31fa1761]" started-at="2019-10-03T15:49:25Z" name="afterClass" finished-at="2019-10-03T15:49:25Z" duration-ms="246" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method signature="negativeScenarioDeleteBeforeSearching()[pri:2, instance:EmployeeAPITest@31fa1761]" started-at="2019-10-03T15:29:59Z" name="negativeScenarioDeleteBeforeSearching" finished-at="2019-10-03T15:30:02Z" duration-ms="3432" status="PASS">
+        <test-method signature="negativeScenarioDeleteBeforeSearching()[pri:2, instance:EmployeeAPITest@31fa1761]" started-at="2019-10-03T15:49:25Z" name="negativeScenarioDeleteBeforeSearching" finished-at="2019-10-03T15:49:26Z" duration-ms="1121" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at EmployeeAPICalls.createEmployee(EmployeeAPICalls.java:38)
+at EmployeeAPITest.negativeScenarioDeleteBeforeSearching(EmployeeAPITest.java:38)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:74)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+at org.apache.maven.surefire.Surefire.run(Surefire.java:177)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:338)
+at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:997)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- negativeScenarioDeleteBeforeSearching -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:EmployeeAPITest@31fa1761]" started-at="2019-10-03T15:30:02Z" name="afterClass" finished-at="2019-10-03T15:30:02Z" duration-ms="49" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:EmployeeAPITest@31fa1761]" started-at="2019-10-03T15:49:26Z" name="afterClass" finished-at="2019-10-03T15:49:26Z" duration-ms="70" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method signature="negativeScenarioGetEmployeeWithIncorrectID()[pri:3, instance:EmployeeAPITest@31fa1761]" started-at="2019-10-03T15:30:02Z" name="negativeScenarioGetEmployeeWithIncorrectID" finished-at="2019-10-03T15:30:03Z" duration-ms="473" status="PASS">
+        <test-method signature="negativeScenarioGetEmployeeWithIncorrectID()[pri:3, instance:EmployeeAPITest@31fa1761]" started-at="2019-10-03T15:49:26Z" name="negativeScenarioGetEmployeeWithIncorrectID" finished-at="2019-10-03T15:49:26Z" duration-ms="529" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- negativeScenarioGetEmployeeWithIncorrectID -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:EmployeeAPITest@31fa1761]" started-at="2019-10-03T15:30:03Z" name="afterClass" finished-at="2019-10-03T15:30:03Z" duration-ms="37" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:EmployeeAPITest@31fa1761]" started-at="2019-10-03T15:49:26Z" name="afterClass" finished-at="2019-10-03T15:49:27Z" duration-ms="33" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

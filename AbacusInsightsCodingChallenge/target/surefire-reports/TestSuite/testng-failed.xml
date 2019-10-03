@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [TestSuite]" verbose="0">
-  <test thread-count="5" name="Tst(failed)" verbose="0">
+  <test thread-count="5" name="Test(failed)" verbose="0">
     <classes>
       <class name="EmployeeAPITest">
         <methods>
+          <include name="afterClass"/>
           <include name="positiveScenario"/>
+          <include name="negativeScenarioDeleteBeforeSearching"/>
         </methods>
       </class> <!-- EmployeeAPITest -->
     </classes>
-  </test> <!-- Tst(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [TestSuite] -->
